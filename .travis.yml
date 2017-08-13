@@ -14,11 +14,11 @@ branches:
   - main
 
 install:
-  - pip install pytest
-  - pip install mock
   - npm install electron-packager -g
   - virtualenv runtests
   - source runtests/bin/activate
+  - pip install pytest
+  - pip install mock
   - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
   - git clone https://github.com/nCoda/lychee.git lychee
   - git clone https://github.com/nCoda/fujian.git fujian
