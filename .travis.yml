@@ -17,11 +17,19 @@ install:
   - pip install pytest
   - pip install mock
   - npm install electron-packager -g
-  - source bundleMainApp.sh
-  - cd build && source backend_venv/bin/activate && cd ..
+  - virtualenv runtests
+  - source runtests/bin/activate
+  - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
+  - https://github.com/nCoda/lychee.git lychee
+  - git clone https://github.com/nCoda/fujian.git fujian
+  - git clone https://github.com/nCoda/julius.git julius
 
 script: source build_test.sh
 
+before-deploy:
+  - rm -rf runtests
+  # - source bundleMainApp.sh
+  # - cd build && source backend_venv/bin/activate && cd ..
 
 deploy:
   provider: releases
