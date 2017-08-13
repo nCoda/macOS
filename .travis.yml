@@ -22,7 +22,7 @@ install:
   - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
   - git clone https://github.com/nCoda/lychee.git lychee
   - git clone https://github.com/nCoda/fujian.git fujian
-  - git clone https://github.com/nCoda/julius.git julius
+  - git clone --recursive https://github.com/nCoda/julius.git julius
   - cd julius && npm install && cd ..
 
 script: source build_test.sh
