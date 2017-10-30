@@ -53,16 +53,15 @@ then
 fi
 # build Electron app
 
-cd julius && node_modules/.bin/browserify js/ncoda-init.js --outfile js/ncoda-compiled.js && cd ..
 cd julius && node_modules/.bin/lessc css/ncoda/main.less css/ncoda/main.css && cd ..
+cd julius && node_modules/.bin/browserify js/ncoda-init.js --outfile js/ncoda-compiled.js && cd ..
 cp package.json julius/
-pwd
 mv electron_main_production.js julius/js/electron_main.js
 rm -rf julius/nCoda-darwin-x64
 cd julius && electron-packager . --icon=../nCoda.icns && cd ..
 cp -r dist/nCoda.app julius/nCoda-darwin-x64/nCoda.app/Contents/Resources/
-cd ..
-# wd: macOS/
+cp -r julius/node_modules/codemirror julius/nCoda-darwin-x64/nCoda.app/Contents/Resources/app/node_modules/codemirror
+cd .. # -> macOS/
 mkdir dist && cd dist # -> macOS/dist
 hdiutil create -srcfolder ../build/julius/nCoda-darwin-x64/nCoda.app nCoda.dmg
 deactivate
