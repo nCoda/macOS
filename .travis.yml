@@ -21,8 +21,8 @@ install:
   - pip install pytest
   - pip install mock
   - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
-  # - git clone https://github.com/nCoda/lychee.git lychee
-  # - git clone https://github.com/nCoda/fujian.git fujian
+  - git clone https://github.com/nCoda/lychee.git lychee
+  - git clone https://github.com/nCoda/fujian.git fujian
   - git clone --recursive https://github.com/nCoda/julius.git julius
   - cd julius # -> /build/julius
   - npm install
@@ -30,15 +30,17 @@ install:
   - cd mercurial-hug # -> /build/mercurial-hug
   - pip install .
   - cd .. # -> /build
-  # - cd lychee && pip install . && cd ..
-  # - cd fujian && pip install . && cd ..
-  # - cd julius && npm install && cd ..
+  - cd lychee # -> /build/lychee
+  - pip install .
+  - cd .. # -> /build
+  - cd fujian # -> /build/fujian
+  - pip install . 
+  - cd .. # -> /build
 
 script: source build_test.sh
 
 before-deploy:
   - rm -rf runtests
-  - echo "passed julius tests"
   # - source bundleMainApp.sh
   # - cd build && source backend_venv/bin/activate && cd ..
 
