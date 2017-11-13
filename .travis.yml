@@ -24,8 +24,9 @@ install:
   # - git clone https://github.com/nCoda/lychee.git lychee
   # - git clone https://github.com/nCoda/fujian.git fujian
   - git clone --recursive https://github.com/nCoda/julius.git julius
-  - cd julius
+  - cd julius # -> /build/julius
   - npm install
+  - cd .. # -> /build
   # - cd mercurial-hug && pip install . && cd ..
   # - cd lychee && pip install . && cd ..
   # - cd fujian && pip install . && cd ..
