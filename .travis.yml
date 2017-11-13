@@ -13,25 +13,27 @@ branches:
   only:
   - main
 
+
 install:
   - npm install electron-packager -g
   - virtualenv runtests
   - source runtests/bin/activate
   - pip install pytest
   - pip install mock
-  - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
-  - git clone https://github.com/nCoda/lychee.git lychee
-  - git clone https://github.com/nCoda/fujian.git fujian
+  # - git clone https://github.com/nCoda/mercurial-hug.git mercurial-hug
+  # - git clone https://github.com/nCoda/lychee.git lychee
+  # - git clone https://github.com/nCoda/fujian.git fujian
   - git clone --recursive https://github.com/nCoda/julius.git julius
-  - cd mercurial-hug && pip install . && cd ..
-  - cd lychee && pip install . && cd ..
-  - cd fujian && pip install . && cd ..
-  - cd julius && npm install && cd ..
+  # - cd mercurial-hug && pip install . && cd ..
+  # - cd lychee && pip install . && cd ..
+  # - cd fujian && pip install . && cd ..
+  # - cd julius && npm install && cd ..
 
 script: source build_test.sh
 
 before-deploy:
   - rm -rf runtests
+  - echo "passed julius tests"
   # - source bundleMainApp.sh
   # - cd build && source backend_venv/bin/activate && cd ..
 

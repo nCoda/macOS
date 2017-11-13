@@ -49,7 +49,9 @@ fi
 if ! [ -d julius ]
 then
     git clone --recursive https://github.com/nCoda/julius.git julius
-    cd julius && npm install && cd .. # -> macOS/build/
+    cd julius # -> macOS/build/julius
+    git checkout 31ffca86eb7f7579f668d876c8e8bba5c2dc1f54
+    npm install && cd .. # -> macOS/build/
 fi
 # build Electron app
 
@@ -62,6 +64,9 @@ cd julius && electron-packager . --icon=../nCoda.icns && cd ..
 cp -r dist/nCoda.app julius/nCoda-darwin-x64/nCoda.app/Contents/Resources/
 cp -r julius/node_modules/codemirror julius/nCoda-darwin-x64/nCoda.app/Contents/Resources/app/node_modules/codemirror
 cd .. # -> macOS/
+# copy LilyPond into backend directory
+cp -r /Applications/LilyPond.app build/julius/nCoda-darwin-x64/nCoda.app/Contents/Resources/nCoda.app/Contents/Resources/
+# create disk image from built app bundle
 mkdir dist && cd dist # -> macOS/dist
 hdiutil create -srcfolder ../build/julius/nCoda-darwin-x64/nCoda.app nCoda.dmg
 deactivate
