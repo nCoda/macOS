@@ -8,6 +8,6 @@ echo "Running all the test suites."
 echo "Running Julius tests."
 cd julius && npm test && cd ..
 cd fujian && py.test && cd ..
-cd lychee && py.test && cd ..
+# cd lychee && py.test && cd ..
 echo "Running mercurial tests."
 cd mercurial-hug && py.test && cd ..
