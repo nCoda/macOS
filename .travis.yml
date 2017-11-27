@@ -16,6 +16,7 @@ branches:
 
 install:
   - npm install electron-packager -g
+  - source bundleMainApp.sh
   # - virtualenv runtests
   # - source runtests/bin/activate
   # - pip install pytest
@@ -41,7 +42,6 @@ script: source build_test.sh
 
 before-deploy:
 # - rm -rf runtests
-- source bundleMainApp.sh
 
 deploy:
   provider: releases
