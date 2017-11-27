@@ -1,0 +1,20 @@
+{
+  "testenv/src/fujian/tests/test_fujian.py": true, 
+  "testenv/src/lychee/lychee/converters/inbound/tests/test_abjad_to_lmei.py": true, 
+  "testenv/src/lychee/lychee/converters/inbound/tests/test_lilypond.py": true, 
+  "testenv/src/lychee/lychee/converters/inbound/tests/test_lilypond_parser.py": true, 
+  "testenv/src/lychee/lychee/converters/outbound/tests/test_document_outbound.py": true, 
+  "testenv/src/lychee/lychee/converters/outbound/tests/test_lmei_to_abjad.py": true, 
+  "testenv/src/lychee/lychee/converters/outbound/tests/test_lmei_to_ly.py": true, 
+  "testenv/src/lychee/lychee/converters/outbound/tests/test_lmei_to_mei.py": true, 
+  "testenv/src/lychee/lychee/document/test/test_document.py": true, 
+  "testenv/src/lychee/lychee/signals/test/test_signal.py": true, 
+  "testenv/src/lychee/lychee/tests/test_logs.py": true, 
+  "testenv/src/lychee/lychee/utils/tests/test_lilypond_utils.py": true, 
+  "testenv/src/lychee/lychee/utils/tests/test_music_utils.py": true, 
+  "testenv/src/lychee/lychee/views/inbound/tests/test_abjad.py": true, 
+  "testenv/src/lychee/lychee/workflow/tests/test_registrar.py": true, 
+  "testenv/src/lychee/lychee/workflow/tests/test_session.py": true, 
+  "testenv/src/lychee/lychee/workflow/tests/test_steps.py": true, 
+  "testenv/src/mercurial-hug/tests/test_hug.py": true
+}
