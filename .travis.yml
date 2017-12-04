@@ -13,7 +13,6 @@ branches:
   only:
   - main
 
-
 install:
   - npm install electron-packager -g
   - source bundleMainApp.sh
