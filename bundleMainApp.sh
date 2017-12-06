@@ -14,7 +14,7 @@ then
     cp production_requirements.txt build/
     cp package.json build/
     cd build # -> macOS/build/
-    virtualenv backend_venv
+    virtualenv -p /usr/local/bin/python2.7 backend_venv
     source backend_venv/bin/activate
     pip install -r production_requirements.txt
     mkdir programs

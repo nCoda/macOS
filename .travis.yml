@@ -13,6 +13,9 @@ branches:
   only:
   - main
 
+before_install:
+  - brew install python
+
 install:
   - npm install electron-packager -g
   - source bundleMainApp.sh
