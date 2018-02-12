@@ -50,7 +50,7 @@ if ! [ -d julius ]
 then
     git clone --recursive https://github.com/nCoda/julius.git julius
     cd julius # -> macOS/build/julius
-    git checkout cb586c43dd55f7055bd38182f4800628e19e64b4
+    # git checkout cb586c43dd55f7055bd38182f4800628e19e64b4
     npm install && cd .. # -> macOS/build/
 fi
 # build Electron app
