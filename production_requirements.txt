@@ -1,6 +1,5 @@
-git+https://github.com/nCoda/mercurial-hug.git@476c8ef2fe0f4a8cffbf1ff047afeee5cbc58469#egg=mercurial_hug
-git+https://github.com/nCoda/lychee.git@9bb81b341469e111083b27afcc0365db7d62bba0#egg=Lychee
-git+https://github.com/nCoda/fujian.git@96e72275a13ac9cc8ddff6204e6683179749a4b5#egg=Fujian
+git+https://github.com/nCoda/lychee
+git+https://github.com/nCoda/fujian
 tornado==4.5.1
 Abjad==2.21
 biplist==1.0.2
