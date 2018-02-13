@@ -20,7 +20,9 @@ then
     # unarchive the demo project
     mkdir .hgdemo_archive
     cp ../../ncoda/.hgdemo_archive/hgdemo-201802.xz .hgdemo_archive/hgdemo-201802.xz 
+    cd .hgdemo_archive # -> macOS/build/.hgdemo_archive
     unar hgdemo-201802.xz
+    cd .. # -> macOS/build/
     # mkdir programs
     # cd programs # -> macOS/build/programs/
     # git clone https://github.com/nCoda/ShelfExtender.git ShelfExtender
