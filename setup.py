@@ -17,7 +17,8 @@ OPTIONS = {
 
 setup(
     app=APP,
-    data_files=['programs'],
+    # data_files=['programs'],
+    data_files=['.hgdemo_archive'],
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
 )

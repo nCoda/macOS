@@ -17,13 +17,17 @@ then
     virtualenv -p /usr/local/bin/python2.7 backend_venv
     source backend_venv/bin/activate
     pip install -r production_requirements.txt
-    mkdir programs
-    cd programs # -> macOS/build/programs/
-    git clone https://github.com/nCoda/ShelfExtender.git ShelfExtender
-    git clone https://github.com/nCoda/hgdemo_config.git hgdemo_config
-    cd ShelfExtender && pip install . && cd ..
-    cd hgdemo_config && python -m shelfex && cd ..
-    cp -r hgdemo_config/repo hgdemo
+    # unarchive the demo project
+    mkdir .hgdemo_archive
+    cp ../../ncoda/.hgdemo_archive/hgdemo-201802.xz .hgdemo_archive/hgdemo-201802.xz 
+    unar hgdemo-201802.xz
+    # mkdir programs
+    # cd programs # -> macOS/build/programs/
+    # git clone https://github.com/nCoda/ShelfExtender.git ShelfExtender
+    # git clone https://github.com/nCoda/hgdemo_config.git hgdemo_config
+    # cd ShelfExtender && pip install . && cd ..
+    # cd hgdemo_config && python -m shelfex && cd ..
+    # cp -r hgdemo_config/repo hgdemo
     cd .. # -> macOS/build/
 
 else
