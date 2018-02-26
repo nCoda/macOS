@@ -18,7 +18,6 @@ then
     virtualenv -p /usr/local/bin/python2.7 backend_venv
     source backend_venv/bin/activate
     pip install -r production_requirements.txt
-    cd .. # -> macOS/build/
     mkdir programs 
     cd programs # -> macOS/build/programs
     tar xJf ../hgdemo-201802.xz
