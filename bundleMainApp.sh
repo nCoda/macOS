@@ -1,6 +1,6 @@
-    #!/usr/bin/env bash
+#!/usr/bin/env bash
 #
-# Copyright 2016 Jeff Trevino
+# Copyright 2016-18 Jeff Trevino
 
 
 # first back
@@ -10,6 +10,7 @@ then
     cp nCoda.icns build/
     cp nCoda.py build/
     cp setup.py build/
+    cp hgdemo-201802.xz build/
     cp electron_main_production.js build/
     cp production_requirements.txt build/
     cp package.json build/
@@ -17,19 +18,10 @@ then
     virtualenv -p /usr/local/bin/python2.7 backend_venv
     source backend_venv/bin/activate
     pip install -r production_requirements.txt
-    # unarchive the demo project
-    mkdir hgdemo_archive
-    cp ../../ncoda/.hgdemo_archive/hgdemo-201802.xz hgdemo_archive/hgdemo-201802.xz 
-    cd hgdemo_archive # -> macOS/build/hgdemo_archive
-    unar hgdemo-201802.xz
     cd .. # -> macOS/build/
-    # mkdir programs
-    # cd programs # -> macOS/build/programs/
-    # git clone https://github.com/nCoda/ShelfExtender.git ShelfExtender
-    # git clone https://github.com/nCoda/hgdemo_config.git hgdemo_config
-    # cd ShelfExtender && pip install . && cd ..
-    # cd hgdemo_config && python -m shelfex && cd ..
-    # cp -r hgdemo_config/repo hgdemo
+    mkdir programs 
+    cd programs # -> macOS/build/programs
+    tar xJf ../hgdemo-201802.xz
     cd .. # -> macOS/build/
 
 else
